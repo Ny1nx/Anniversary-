@@ -8,13 +8,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
 </head>
-<body>
+<body onclick="playAudio()">
+  <script>
+  
+    function playAudio() {
+     var audio = document.getElementById("audio1");
+     audio.play();
+    
+    }
+    </script>   
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
       </head>
-      <audio style="display: none;" id= "audio1" controls="controls" loop autoplay onloadeddata="setHalfVolume()" >
+      
+      <audio style="display: none;" id= "audio1" controls="controls" autoplay preload="auto" onloadeddata="setHalfVolume()" >
         <source src="Lattee.mp3"  type="audio/mp3">
     </audio>
     <script>function setHalfVolume() {
@@ -65,7 +74,7 @@
                   </div>
                 </div>
               </div>
-              <div class='heart'></div>
+              <div class='heart' ></div>
             </div>
             <div class='heart2'>
                 <p>For Latte</p>
